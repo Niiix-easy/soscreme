@@ -57,7 +57,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenOrder, onScrollT
             </ul>
 
             {/* Action Buttons & Video Trigger */}
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto mb-8">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto mb-4">
               <button
                 onClick={() => onOpenOrder('plan-duo')}
                 className="group flex items-center justify-center gap-3 px-8 py-4 text-base font-bold text-slate-950 bg-gradient-to-r from-amber-300 via-amber-400 to-amber-500 hover:from-amber-400 hover:to-amber-300 rounded-xl shadow-xl shadow-amber-500/25 active:scale-98 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300"
@@ -73,24 +73,14 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenOrder, onScrollT
                 <div className="w-7 h-7 rounded-full bg-amber-400/20 text-amber-300 flex items-center justify-center">
                   <Play className="w-3.5 h-3.5 fill-current ml-0.5" aria-hidden="true" />
                 </div>
-                <span>Assistir Aplicação Real (03 min)</span>
+                <span>Assistir Aplicação</span>
               </button>
             </div>
 
-            {/* Trust and Social Proof Strip */}
-            <div className="flex flex-wrap items-center gap-6 pt-4 border-t border-slate-800/80 text-xs text-slate-400">
-              <div className="flex items-center gap-2">
-                <ShieldCheck className="w-4 h-4 text-amber-400" aria-hidden="true" />
-                <span>Homologado na ANVISA</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Truck className="w-4 h-4 text-amber-400" aria-hidden="true" />
-                <span>Envio Imediato para todo o Brasil</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="font-semibold text-emerald-400">4.9/5★</span>
-                <span>Mais de 1.840 avaliações</span>
-              </div>
+            {/* Urgency Counter & Trust Badges */}
+            <div className="flex flex-col gap-2">
+              <ScarcityCounter />
+              <TrustBadges />
             </div>
           </div>
 
